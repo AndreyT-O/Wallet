@@ -1,0 +1,29 @@
+@mixin min($width) {
+    @media screen and (min-width: #{$width}) {
+        @content;
+    }
+}
+
+@mixin max($width) {
+    @media screen and (max-width: #{$width}) {
+        @content;
+    }
+}
+
+@mixin transition($elements, $time) {
+    will-change: $elements;
+    transition-property: $elements;
+    transition-duration: $time;
+}
+
+@mixin widthGap($count, $gap, $gapRow: null){
+    @if $gapRow {
+        column-gap: $gap;
+        row-gap: $gapRow;
+    } @else {
+        gap: #{$gap};
+    }
+    &>*{
+        width: calc(100% / #{$count} - ((#{$gap} * (#{$count} - 1)) / #{$count}));
+    }
+}

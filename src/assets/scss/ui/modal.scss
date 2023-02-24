@@ -1,0 +1,71 @@
+.modal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 280px;
+    width: 100%;
+    &--login, &--registration {
+        padding-top: 110px;
+        .modal {
+            &__logo {
+                margin-bottom: 50px;
+            }
+        }
+    }
+    &--registration {
+        padding-top: 35px;
+    }
+    &__wrapper {
+        margin-bottom: 40px;
+    }
+    &__actions {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 20px;
+    }
+    &__form {
+        width: 100%;
+    }
+}
+
+@include min(480px) {
+    .modal {
+        max-width: 320px;
+    }
+}
+
+@include min(768px) {
+    .modal {
+        max-width: none;
+        padding: 40px 65px 60px 65px;
+        &--login {
+            padding-top: 40px;
+            .modal {
+                &__logo {
+                    margin-bottom: 50px;
+                }
+            }
+        }
+        &__button {
+            max-width: 300px;
+        }
+    }
+}
+
+@include min(992px) {
+    .modal {
+        &__button {
+            max-width: 250px;
+        }
+    }
+}
+
+@include min(1360px) {
+    .modal {
+        &__button {
+            max-width: 300px;
+        }
+    }
+}

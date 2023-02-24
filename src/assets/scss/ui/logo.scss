@@ -1,0 +1,50 @@
+.logo {
+    --font-size: 24px;
+    --size-icon: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 15px;
+    &__icon {
+        width: var(--size-icon);
+        height: var(--size-icon);
+    }
+    &__text {
+        font-size: var(--font-size);
+        font-weight: 700;
+        line-height: 1;
+        transform: translateY(2px);
+    }
+}
+
+@include min(768px) {
+    .logo {
+        --font-size: 30px;
+        --size-icon: 40px;
+        column-gap: 20px;
+    }
+}
+
+
+@include min(992px) {
+    .logo {
+        --font-size: 20px;
+        --size-icon: 30px;
+        column-gap: 10px;
+    }
+}
+
+@include min(1200px) {
+    .logo {
+        --font-size: 25px;
+        --size-icon: 35px;
+    }
+}
+
+@include min(1360px) {
+    .logo {
+        --font-size: 30px;
+        --size-icon: 40px;
+        column-gap: 20px;
+    }
+}
